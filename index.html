@@ -8,7 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100">
+<style>
+    body{
+        background: url(3068309671.png) no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
+
+<body class="font-sans bg-blue-50">
 
     <div class="container mx-auto p-5 max-w-4xl bg-white bg-opacity-80 rounded-lg shadow-lg">
         <h1 class="text-3xl font-bold text-center text-blue-600 mb-5">Weather Forecast</h1>
@@ -18,19 +25,24 @@
             <input id="city-input" type="text" placeholder="Enter City Name" class="border p-2 rounded-lg w-64">
             <button id="search-btn" class="bg-blue-600 text-white p-2 rounded-lg ml-2">Search</button>
         </div>
-        
+
         <!-- OR Section -->
         <div class="flex justify-center items-center mb-8 text-gray-600">
             <span class="mx-3">or</span>
             <button id="current-location-btn" class="bg-gray-500 text-white p-3 rounded-lg shadow-lg">Use Current Location</button>
         </div>
 
-        <div id="weather-data" class="text-center">
+        <!-- Weather Display section -->
+        <div id="weather-data" class="bg-blue-500 text-white p-5 rounded-lg shadow-md text-center">
             <!-- Weather information will be displayed here -->
         </div>
 
-        <div id="forecast-data" class="mt-5">
-            <!-- Extended forecast data will be displayed here -->
+        <!-- 5-Day Forecast Section -->
+        <div class="mt-10">
+            <h3 class="text-2xl font-bold text-center mb-4">5-Day Forecast</h3>
+            <div id="forecast-data" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Forecast cards will be displayed here -->
+            </div>
         </div>
     </div>
 
