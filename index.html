@@ -9,15 +9,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-100">
-    
-    <div class="container mx-auto p-5">
+
+    <div class="container mx-auto p-5 max-w-4xl bg-white bg-opacity-80 rounded-lg shadow-lg">
         <h1 class="text-3xl font-bold text-center text-blue-600 mb-5">Weather Forecast</h1>
         
+        <!-- Search and Current Location -->
         <div class="flex justify-center mb-5">
             <input id="city-input" type="text" placeholder="Enter City Name" class="border p-2 rounded-lg w-64">
             <button id="search-btn" class="bg-blue-600 text-white p-2 rounded-lg ml-2">Search</button>
         </div>
         
+        <!-- OR Section -->
+        <div class="flex justify-center items-center mb-8 text-gray-600">
+            <span class="mx-3">or</span>
+            <button id="current-location-btn" class="bg-gray-500 text-white p-3 rounded-lg shadow-lg">Use Current Location</button>
+        </div>
+
         <div id="weather-data" class="text-center">
             <!-- Weather information will be displayed here -->
         </div>
