@@ -40,6 +40,17 @@ function fetchWeatherData(city) {
         .catch(error => console.error("Error fetching weather data:", error));
 }
 
+function fetchWeatherDataByLocation(lat, lon) {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            displayWeatherData(data);
+            fetchForecastData(lat, lon);
+        })
+        .catch(error => console.error("Error fetching weather data:", error));
+}
+
 function displayWeatherData(data) {
     const weatherDiv = document.getElementById('weather-data');
     weatherDiv.innerHTML = `
