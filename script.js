@@ -59,6 +59,7 @@ function displayWeatherData(data) {
         <p class="text-lg">Weather: ${data.weather[0].description}</p>
         <p class="text-lg">Humidity: ${data.main.humidity}%</p>
         <p class="text-lg">Wind Speed: ${data.wind.speed} m/s</p>
+        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" class="mx-auto mt-2" alt="weather icon">
     `;
 }
 
@@ -86,6 +87,7 @@ function displayForecastData(forecastList) {
                 <p>Weather: ${forecast.weather[0].description}</p>
                 <p>Wind: ${forecast.wind.speed} m/s</p>
                 <p>Humidity: ${forecast.main.humidity}%</p>
+                <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" class="mx-auto mt-2" alt="forecast icon">
             </div>
         `;
     });
