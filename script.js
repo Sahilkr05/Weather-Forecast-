@@ -1,11 +1,26 @@
 const API_KEY = '277605ed4b97b05b8459bda7388c2d4d';
 
+
+//event listeners for the button
 document.getElementById('search-btn').addEventListener('click', function () {
     const city = document.getElementById('city-input').value.trim();
     if (city) {
         fetchWeatherData(city);
     } else {
         alert("Please enter a valid city name.");
+    }
+});
+
+//weather of current location
+document.getElementById('current-location-btn').addEventListener('click', () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            fetchWeatherDataByLocation(lat, lon);
+        });
+    } else {
+        alert("Geolocation is not supported by this browser.");
     }
 });
 
