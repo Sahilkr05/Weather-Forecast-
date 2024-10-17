@@ -21,5 +21,5 @@ This application is built with a responsive layout, ensuring compatibility acros
 
 ![screenshot](https://github.com/user-attachments/assets/05664c9a-2403-477d-a4e8-661d510f18eb)
 
-License
+**License**
 © 2024 Sahil Kumar. All rights reserved.
