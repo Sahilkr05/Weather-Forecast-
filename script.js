@@ -76,12 +76,12 @@ function fetchForecastData(lat, lon) {
 
 function displayForecastData(forecastList) {
     const forecastDiv = document.getElementById('forecast-data');
-    forecastDiv.innerHTML = `<h3 class="text-xl font-bold">5-Day Forecast</h3>`;
+    forecastDiv.innerHTML = ``;
     
     forecastList.slice(0, 5).forEach(forecast => {
         const forecastDate = new Date(forecast.dt * 1000).toLocaleDateString("en-US");
         forecastDiv.innerHTML += `
-            <div class="bg-white p-4 rounded-lg shadow-lg my-2">
+            <div class="bg-blue-500 text-white p-4 rounded-lg shadow-lg my-2">
                 <p class="text-md font-bold">${forecastDate}</p>
                 <p>Temperature: ${forecast.main.temp}°C</p>
                 <p>Weather: ${forecast.weather[0].description}</p>
