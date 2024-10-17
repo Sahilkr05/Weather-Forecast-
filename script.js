@@ -6,10 +6,49 @@ document.getElementById('search-btn').addEventListener('click', function () {
     const city = document.getElementById('city-input').value.trim();
     if (city) {
         fetchWeatherData(city);
+        saveCityToLocalStorage(city); // Save city after searching
     } else {
         alert("Please enter a valid city name.");
     }
 });
+
+// Function to save the searched city in local storage
+function saveCityToLocalStorage(city) {
+    let searchedCities = JSON.parse(localStorage.getItem('searchedCities')) || [];
+    if (!searchedCities.includes(city)) {
+        searchedCities.push(city);
+        localStorage.setItem('searchedCities', JSON.stringify(searchedCities));
+    }
+    updateCityDropdown();
+}
+
+// Function to update the dropdown menu
+function updateCityDropdown() {
+    const cityDropdown = document.getElementById('cityDropdown');
+    const searchedCities = JSON.parse(localStorage.getItem('searchedCities')) || [];
+    cityDropdown.innerHTML = '<option value="">Recently Searched Cities</option>';
+
+    searchedCities.forEach(city => {
+        let option = document.createElement('option');
+        option.value = city;
+        option.textContent = city;
+        cityDropdown.appendChild(option);
+    });
+}
+
+// Event listener for the dropdown selection
+document.getElementById('cityDropdown').addEventListener('change', function() {
+    const selectedCity = this.value;
+    if (selectedCity) {
+        fetchWeatherData(selectedCity);
+    }
+});
+
+// On page load, update dropdown with previously searched cities
+window.onload = function() {
+    updateCityDropdown();
+};
+
 
 //weather of current location
 document.getElementById('current-location-btn').addEventListener('click', () => {
