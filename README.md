@@ -19,7 +19,8 @@ Geolocation API for current location access
 This application is built with a responsive layout, ensuring compatibility across various devices and screen sizes. The layout adjusts from single-column displays on smaller devices to multi-column displays on larger screens.
 
 
-![screenshot](https://github.com/user-attachments/assets/05664c9a-2403-477d-a4e8-661d510f18eb)
+![SCREENSHOT](https://github.com/user-attachments/assets/3c411501-6985-4600-ba3a-36aacfecf864)
+
 
 **License**
 © 2024 Sahil Kumar. All rights reserved.
