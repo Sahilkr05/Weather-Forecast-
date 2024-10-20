@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Forecast App</title>
+    <title>Weather Forecast</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <!-- Include Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-<style>
-    body{
-        background: url(3068309671.png) no-repeat center center fixed;
-        background-size: cover;
-    }
-</style>
 </head>
 
 <body class="font-sans bg-blue-50">
 
-    <div class="container mx-auto p-5 max-w-7xl bg-white bg-opacity-50 rounded-lg shadow-10g">
+    <!-- Video Background -->
+    <video autoplay muted loop class="fixed top-0 left-0 w-full h-full object-cover -z-10">
+        <source src="VID_20241020_180652.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="container mx-auto p-10 max-w-7xl bg-none rounded-lg shadow-10g">
         
         <!-- Weather Dashboard Heading -->
         <div class="bg-blue-600 text-white p-4 rounded-lg shadow-lg mb-6">
@@ -26,7 +27,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             <!-- Search Input and Recent City Dropdown -->
-            <div class="bg-blue-250 p-5 rounded-lg shadow-md">
+            <div class="bg-none p-5">
                 <div class="flex items-center space-x-4 mb-4">
                     <!-- Search Input -->
                     <div class="flex-1">
