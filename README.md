@@ -21,7 +21,8 @@ This application is built with a responsive layout, ensuring compatibility acros
 
 
 ![SCREENSHOT 1](https://github.com/user-attachments/assets/656e32e9-5a49-49c9-ba2a-bf174101ec1e)
-![SCREENSHOT 2](https://github.com/user-attachments/assets/9de0e486-12d1-45ea-b4a2-68de6022a8b3)
+![SCREENSHOT 2](https://github.com/user-attachments/assets/027a44f6-92b2-42ec-8b4f-209ff40d0b45)
+
 
 
 **License**
